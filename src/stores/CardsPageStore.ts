@@ -81,9 +81,12 @@ export const useCardsPageStore = defineStore('cardsPage', {
         if (cardId == card.id) updateCardIndex = index;
       });
       newCards.splice(updateCardIndex, 1);
-      if (updateCardIndex >= 0 && updateCardIndex < newCards.length)
-        this.currentCard = newCards[updateCardIndex].id;
-      else this.currentCard = newCards[0].id;
+
+      if (this.currentTab === 'debit_cards') {
+        this.currentCard = newCards.filter((c) => c.type === 'debit')[0].id;
+      } else {
+        this.currentCard = newCards[0].id;
+      }
       this.cards = newCards;
     },
     setAddCardModal() {
