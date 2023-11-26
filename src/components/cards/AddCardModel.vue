@@ -102,6 +102,7 @@ function clear() {
       >
       <q-form class="add_form column">
         <q-input
+          filled
           ref="cardholderNameRef"
           v-model="cardName"
           label="Cardholder Name"
