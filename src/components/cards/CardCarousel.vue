@@ -29,7 +29,10 @@
       :key="card.id"
       :name="card.id"
       v-for="card in filterCard(cardsStore.currentTab)"
-      class="column no-wrap q-px-none q-pt-lg items-center"
+      class="column no-wrap q-px-none q-pt-lg"
+      :class="
+        $q.platform.is.desktop ? 'justify-center items-center' : 'items-start'
+      "
     >
       <VirtualCard :card="card" />
       <div class="side-card" v-if="$q.platform.is.mobile"></div>
