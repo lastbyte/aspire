@@ -140,6 +140,13 @@ const cardPageStore = useCardsPageStore();
   width: clamp(300px, 100%, 358px);
 }
 
+@media screen and (max-width: 400px) {
+  .virtual-card,
+  .virtual-card-container {
+    width: 328px;
+  }
+}
+
 .desktop .virtual-card,
 .desktop .virtual-card-container {
   min-height: 248px;
