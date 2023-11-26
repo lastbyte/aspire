@@ -74,7 +74,7 @@ See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-webpack/qua
 
 The only working page right now is the cards page (Move to the cards tab to use the application)
 
-[Aspire](https://www.notion.so/Aspire-8c76ebe9d82f4cba81e767b3bb10e704?pvs=21)
+[Aspire](https://lastbyte.github.io/aspire/#/cards)
 
 ## Functionalities
 
