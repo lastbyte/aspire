@@ -11,7 +11,7 @@
           class="row full-width justify-center items-center card-toggle-button-content"
         >
           <q-icon name="visibility" />
-          <span>Show card number</span>
+          <span>{{ $props.card.hidden ? 'Show' : 'Hide' }} card number</span>
         </div>
       </q-btn>
     </div>
