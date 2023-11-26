@@ -1,12 +1,10 @@
 ### Final result
-
-![Mobile layout](./documentation/mobile.png)
-
 Mobile layout
-
-![Desktop layout](./documentation/desktop.png)
+<div style="text-align:center"><img src="./documentation/mobile.png" alt='desktop'/></div>
 
 Desktop layout
+<div style="text-align:center"><img src="./documentation/desktop.png" alt='desktop'/></div>
+
 
 ## Frameworks used :
 
