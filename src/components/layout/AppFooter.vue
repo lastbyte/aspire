@@ -12,15 +12,16 @@ const tab = ref('cards');
 <template>
   <q-footer elevated>
     <q-tabs
+      dense
       active-class="active_tab"
       v-model="tab"
       indicator-color="transparent"
       active-color="white"
-      class="bg-white shadow-2 app_footer_tabs"
+      class="bg-white app_footer_tabs"
     >
       <q-route-tab to="/" no-caps class="app_tab" name="home">
         <template v-slot:default>
-          <div class="column justify-between" style="gap: 2px">
+          <div class="column justify-between items-center" style="gap: 2px">
             <BrandLogo />
             <span>Home</span>
           </div>
@@ -28,7 +29,7 @@ const tab = ref('cards');
       </q-route-tab>
       <q-route-tab to="/cards" no-caps class="app_tab" name="cards">
         <template v-slot:default>
-          <div class="column justify-between" style="gap: 2px">
+          <div class="column justify-between items-center" style="gap: 2px">
             <CardsLogo />
             <span>Cards</span>
           </div>
@@ -36,7 +37,7 @@ const tab = ref('cards');
       </q-route-tab>
       <q-route-tab to="/payment" no-caps class="app_tab" name="payment">
         <template v-slot:default>
-          <div class="column justify-between" style="gap: 2px">
+          <div class="column justify-between items-center" style="gap: 2px">
             <PaymentsLogo />
             <span>Payment</span>
           </div>
@@ -44,7 +45,7 @@ const tab = ref('cards');
       </q-route-tab>
       <q-route-tab to="/credit" no-caps class="app_tab" name="credit">
         <template v-slot:default>
-          <div class="column justify-between" style="gap: 2px">
+          <div class="column justify-between items-center" style="gap: 2px">
             <CreditLogo />
             <span>Credit</span>
           </div>
@@ -52,7 +53,7 @@ const tab = ref('cards');
       </q-route-tab>
       <q-route-tab to="/profile" no-caps class="app_tab" name="profile">
         <template v-slot:default>
-          <div class="column justify-between" style="gap: 2px">
+          <div class="column justify-between items-center" style="gap: 2px">
             <ProfileLogo />
             <span>Profile</span>
           </div>
@@ -62,14 +63,16 @@ const tab = ref('cards');
   </q-footer>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@import '../../css/quasar.variables.scss';
+
 .app_tab {
   color: #dddddd;
 }
 
 .active_tab {
-  color: #01d167;
-  fill: #01d167;
+  color: $color-primary;
+  fill: $color-primary;
 }
 
 .app_tab span {
@@ -92,12 +95,13 @@ const tab = ref('cards');
 
 .app_tab[aria-selected='true'] span,
 .app_tab[aria-selected='true'] svg {
-  color: #01d167;
-  fill: #01d167;
+  color: $color-primary;
+  fill: $color-primary;
 }
 
 .app_footer_tabs {
-  padding-inline: 30px;
+  //padding-inline: 30px;
   padding-block: 8px 9px;
+  box-shadow: 0 -3px 6px 0 $color-white-200;
 }
 </style>
