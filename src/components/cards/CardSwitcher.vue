@@ -6,8 +6,8 @@ const cardPageStore = useCardsPageStore();
 
 <template>
   <q-tabs
-    v-model="cardPageStore.currentTab"
     shrink
+    :model-value="cardPageStore.currentTab"
     narrow-indicator
     dense
     outside-arrows
@@ -22,12 +22,14 @@ const cardPageStore = useCardsPageStore();
       class="tab text-white q-pl-none"
       name="debit_cards"
       label="My debit cards"
+      @click="() => cardPageStore.setCurrentTab('debit_cards')"
     />
     <q-tab
       no-caps
       class="tab text-white"
       name="company_cards"
       label="All company cards"
+      @click="() => cardPageStore.setCurrentTab('company_cards')"
     />
   </q-tabs>
 </template>

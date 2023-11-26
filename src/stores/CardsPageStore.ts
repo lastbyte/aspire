@@ -30,6 +30,18 @@ export const useCardsPageStore = defineStore('cardsPage', {
       this.transactions = getTransactions(cardId);
       console.debug('current card is ', this.currentCard);
     },
+    setCurrentTab(tab: string) {
+      if (tab === 'debit_cards') {
+        const debitCards = this.cards.filter((c) => c.type === 'debit');
+        if (
+          debitCards &&
+          !debitCards.map((c) => c.id).includes(this.currentCard)
+        ) {
+          this.currentCard = debitCards[0].id;
+        }
+      }
+      this.currentTab = tab;
+    },
     freezeCard(cardId: string) {
       console.debug('freezing card');
       const newCards = [...this.cards];
