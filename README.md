@@ -1,6 +1,6 @@
 ### Final result
 Mobile layout
-<div style="text-align:center"><img src="./documentation/mobile.png" alt='desktop'/></div>
+<div style="text-align:center"><img width='414' src="./documentation/mobile.png" alt='desktop'/></div>
 
 Desktop layout
 <div style="text-align:center"><img src="./documentation/desktop.png" alt='desktop'/></div>
