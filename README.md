@@ -1,9 +1,9 @@
 ### Final result
 Mobile layout
-<div style="text-align:center"><img width='414' src="./documentation/mobile.png" alt='desktop'/></div>
+<div style="width:100%;display:flex;justify-content: center"><img width='414' src="./documentation/mobile.png" alt='desktop'/></div>
 
 Desktop layout
-<div style="text-align:center"><img src="./documentation/desktop.png" alt='desktop'/></div>
+<div style="width:100%;display:flex;justify-content: center"><img src="./documentation/desktop.png" alt='desktop'/></div>
 
 
 ## Frameworks used :
@@ -13,7 +13,7 @@ Desktop layout
 
 ## Project Structure :
 
-- `**src**` : Contains the application's source code.
+- **`src`** : Contains the application's source code.
 - **`components`**: Houses various components, like 'card', 'TransactionList', etc.
 - **`pages`**: Hosts pages for the app, organized as follows:
     - **`mobile`**: For mobile page layouts.
