@@ -1,0 +1,17 @@
+@import "quasar.variables";
+.q-expansion-item > div > .q-item {
+  min-height: 72px !important;
+  height: 72px;
+}
+.custom-icon {
+  color: #ddd;
+}
+
+.bold-info {
+  color : $color-secondary;
+  font-weight: $font-weight-semi-bold;
+  font-size: $font-size-lg;
+  padding: 40px 24px;
+  width: 100%;
+  text-align: center;
+}
