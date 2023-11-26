@@ -83,6 +83,7 @@ export const useCardsPageStore = defineStore('cardsPage', {
       newCards.splice(updateCardIndex, 1);
       if (updateCardIndex >= 0 && updateCardIndex < newCards.length)
         this.currentCard = newCards[updateCardIndex].id;
+      else this.currentCard = newCards[0].id;
       this.cards = newCards;
     },
     setAddCardModal() {
