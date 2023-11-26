@@ -59,9 +59,15 @@
           </div>
         </div>
         <div class="row detail_row_3">
-          <div class="row">
+          <div class="row" style="width: 100px">
             <div class="text-white">Thru:</div>
-            <div class="text-white">
+            <div
+              v-if="$props.card.hidden"
+              class="text-white text-center astreik"
+            >
+              ***
+            </div>
+            <div v-else class="text-white">
               {{ $props.card.expiry.month }}/{{
                 $props.card.expiry.year.slice(2)
               }}
@@ -192,6 +198,7 @@ const cardPageStore = useCardsPageStore();
 }
 
 .astreik {
+  height: 18px;
   font-size: 24px;
   letter-spacing: 2.88px;
   line-height: 24px;
