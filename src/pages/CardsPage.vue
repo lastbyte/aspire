@@ -9,15 +9,18 @@ import CardsPageMobile from 'pages/mobile/CardsPage.vue';
 import CardsPageDesktop from 'pages/desktop/CardsPage.vue';
 import { onBeforeMount } from 'vue';
 import { useCardsPageStore } from 'stores/CardsPageStore';
-import { getCards } from 'src/services/CardService';
+import { getAccountDetails, getCards } from 'src/services/CardService';
 import AddCardModel from 'components/cards/AddCardModel.vue';
 
 const cardPageStore = useCardsPageStore();
 
 onBeforeMount(() => {
   console.debug('On Cards page');
-  const cards = getCards();
-  cardPageStore.setCards(cards);
+  const accountDetails = getAccountDetails();
+  cardPageStore.setCardsAndAccount(
+    accountDetails.cards,
+    accountDetails.account
+  );
   cardPageStore.setCurrentCard('card1');
   console.debug(
     'Cards Fetched, ',

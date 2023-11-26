@@ -327,6 +327,18 @@ export function getCardDetails(cardId: string) {
   throw new Error(`Method not Implemented ${cardId}`);
 }
 
+export function getAccountDetails() {
+  return {
+    account: {
+      number: '87346872364',
+      userName: 'Nishant Kumar',
+      userId: '7234',
+      balance: 3221,
+    },
+    cards: getCards(),
+  };
+}
+
 export function getTransactions(cardId: string) {
   if (TRANSACTIONS[cardId]) {
     return TRANSACTIONS[cardId];

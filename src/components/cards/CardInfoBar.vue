@@ -9,7 +9,13 @@ const cardsPageStore = useCardsPageStore();
     <div class="row justify-between">
       <div class="row account_balance">
         <div class="currency">S$</div>
-        <div class="account_balance-value">3,000</div>
+        <div class="account_balance-value">
+          {{
+            Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
+              cardsPageStore.account.balance
+            )
+          }}
+        </div>
       </div>
       <div class="row">
         <q-btn

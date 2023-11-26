@@ -22,4 +22,9 @@ type CardTransaction = {
 };
 type CardExtended = Card & { hidden?: boolean };
 
-type CardMap = { [key in string]: CardExtended };
+type UserAccount = {
+  number: string;
+  userName: string;
+  userId: string;
+  balance: number;
+};

@@ -5,6 +5,7 @@ export const useCardsPageStore = defineStore('cardsPage', {
   state: () =>
     <
       {
+        account: UserAccount;
         cards: CardExtended[];
         currentCard: string;
         currentTab: string;
@@ -22,8 +23,9 @@ export const useCardsPageStore = defineStore('cardsPage', {
   getters: {},
 
   actions: {
-    setCards(cards: Card[]) {
+    setCardsAndAccount(cards: Card[], account: UserAccount) {
       this.cards = cards;
+      this.account = account;
     },
     setCurrentCard(cardId: string) {
       this.currentCard = cardId;
