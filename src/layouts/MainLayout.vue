@@ -40,4 +40,10 @@ import NavigationDrawer from 'components/layout/NavigationDrawer.vue';
 .page-area.col-9 {
   width: calc(75% - 120px);
 }
+
+@media screen and (max-width: 600px) {
+  .page-area {
+    padding: 40px 20px;
+  }
+}
 </style>

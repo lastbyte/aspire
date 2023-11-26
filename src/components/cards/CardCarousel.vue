@@ -14,7 +14,7 @@
     class="rounded-borders card_carousel bg-transparent relative-position"
   >
     <template v-slot:navigation-icon="{ active, onClick }">
-      <div class="row items-start">
+      <div class="row items-center">
         <q-btn
           v-if="active"
           class="dot active-dot"
@@ -29,7 +29,7 @@
       :key="card.id"
       :name="card.id"
       v-for="card in filterCard(cardsStore.currentTab)"
-      class="column no-wrap items-xs-center item-md-start q-px-none q-pt-none q-mt-lg"
+      class="column no-wrap q-px-none q-pt-lg items-center"
     >
       <VirtualCard :card="card" />
       <div class="side-card" v-if="$q.platform.is.mobile"></div>
@@ -95,13 +95,5 @@ function filterCard(tab?: string) {
   height: 8px;
   width: 16px;
   opacity: 100%;
-}
-</style>
-
-<style>
-.card_carousel .q-carousel__navigation--bottom {
-  width: clamp(300px, 100%, 414px);
-  left: unset;
-  right: unset;
 }
 </style>

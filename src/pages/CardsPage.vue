@@ -1,5 +1,5 @@
 <template>
-  <CardsPageMobile v-if="$q.platform.is.mobile" />
+  <CardsPageMobile v-if="$q.platform.is.mobile || $q.screen.width < 440" />
   <CardsPageDesktop v-if="$q.platform.is.desktop" />
   <add-card-model />
 </template>
@@ -9,7 +9,7 @@ import CardsPageMobile from 'pages/mobile/CardsPage.vue';
 import CardsPageDesktop from 'pages/desktop/CardsPage.vue';
 import { onBeforeMount } from 'vue';
 import { useCardsPageStore } from 'stores/CardsPageStore';
-import { getAccountDetails, getCards } from 'src/services/CardService';
+import { getAccountDetails } from 'src/services/CardService';
 import AddCardModel from 'components/cards/AddCardModel.vue';
 
 const cardPageStore = useCardsPageStore();
