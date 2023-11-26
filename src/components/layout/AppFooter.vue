@@ -100,7 +100,7 @@ const tab = ref('cards');
 }
 
 .app_footer_tabs {
-  //padding-inline: 30px;
+  padding-inline: 10px;
   padding-block: 8px 9px;
   box-shadow: 0 -3px 6px 0 $color-white-200;
 }
