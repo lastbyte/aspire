@@ -19,4 +19,7 @@ import CustomLogo from 'src/svg/CustomLogo.vue';
 .brand-logo {
   color: $color-primary;
 }
+.mobile .cards_page_header {
+  padding-right: 24px;
+}
 </style>

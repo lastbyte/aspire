@@ -29,7 +29,7 @@
       :key="card.id"
       :name="card.id"
       v-for="card in filterCard(cardsStore.currentTab)"
-      class="column no-wrap items-xs-center item-md-start q-px-none"
+      class="column no-wrap items-xs-center item-md-start q-px-none q-pt-none q-mt-lg"
     >
       <VirtualCard :card="card" />
       <div class="side-card" v-if="$q.platform.is.mobile"></div>
@@ -80,6 +80,10 @@ function filterCard(tab?: string) {
   height: 800px;
   min-height: 300px;
   width: 100%;
+}
+
+.q_carousel__slide {
+  padding-block: 0 16px !important;
 }
 
 .card_carousel .q_carousel__slide .row {
