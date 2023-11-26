@@ -15,7 +15,9 @@
         </div>
       </q-btn>
     </div>
-    <div class="column virtual-card" :class="card.frozen ? 'frozen' : ''">
+
+    <div class="relative-position column virtual-card">
+      <div v-if="$props.card.frozen" class="frozen"></div>
       <div class="row reverse text-white">
         <CustomLogo :name="$props.card.brand" />
       </div>
@@ -127,8 +129,13 @@ const cardPageStore = useCardsPageStore();
   gap: 6px;
 }
 
-.virtual-card.frozen {
-  opacity: 0.3;
+.frozen {
+  position: absolute;
+  inset: 0 0 0 0;
+  background: #000;
+  z-index: 300;
+  opacity: 0.4;
+  border-radius: 12px;
 }
 
 .virtual-card {
